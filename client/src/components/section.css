@@ -1,0 +1,37 @@
+.box {
+  width: 25vw;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px 40px;
+  background-color: #c6bebe94;
+}
+
+.head {
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.body {
+  margin-top: 5px;
+  text-align: start;
+  margin-left: 20px;
+  font-family: sans-serif;
+}
+
+.para2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+li {
+  text-align: start;
+}
+
+button {
+  font-size: larger;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid black;
+}
