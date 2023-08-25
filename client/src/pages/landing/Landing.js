@@ -13,6 +13,7 @@ const Landing = () => {
     
   return (
     <div className='landing'>
+        
         <div className="heroSection">
             <div className="leftArea">
                 <div className="logo">
