@@ -49,8 +49,31 @@ const SignUp = () => {
 
 
   return (
-    <div className='signUp'>
+    <div className="signUp">
       <div className="head">Sign Up</div>
+      <form className="form">
+        <input className="orgName" type="text" placeholder="Enter Name" />
+        <input
+          className="orgName"
+          type="text"
+          name="organization"
+          placeholder="Organization Name"
+        />
+        <input
+          className="orgName"
+          type="text"
+          name="email"
+          placeholder="Email Address"
+        />
+        <input
+          className="orgName"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+        <div className="signbtn">
+          <button>Sign Up</button>
+        </div>
       <form>
       <input type="text" name="name" value={name} onChange={handleOnChange} placeholder='Enter Name' />
       <input type='text' name="organization" value={organization} onChange={handleOnChange} placeholder='Enter your organization Name' />
@@ -58,9 +81,8 @@ const SignUp = () => {
       <input type='password' name="password" value={password} onChange={handleOnChange} placeholder='Enter your Password' />
       <button onClick={(e)=>handleSignUp(e)}>Sign Up</button>
       </form>
-      
     </div>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

@@ -1,0 +1,48 @@
+.landing {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  overflow-y: hidden;
+  background: linear-gradient(to bottom, white, rgb(2, 50, 123));
+}
+
+.heroSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+  width: 60%;
+  background-color: rgb(17 24 68);
+}
+
+.rightArea {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.leftArea {
+  width: 50%;
+  height: 100%;
+}
+
+.image img {
+  object-fit: cover;
+  height: 82.4vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.or {
+  margin-top: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.btnlogin {
+  width: 11vw;
+  margin-left: 31%;
+}
