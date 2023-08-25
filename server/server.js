@@ -3,15 +3,17 @@ const  express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv")
-// import * as dotenv from "dotenv"; // Note the "* as" syntax
 const authRouter = require("./routes/authRoute")
-dotenv.config(); // Load environment variables from .env file
+dotenv.config(); 
 
 const app = express();
  
 app.use(express.json());
-app.use(cors());
-
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  }));
+  
 app.use("/auth", authRouter);
 const uri = process.env.URI;
 mongoose.connect(uri,
