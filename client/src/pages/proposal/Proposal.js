@@ -1,12 +1,21 @@
-import React from 'react'
-import "./proposal.css"
-import Navbar from '../../components/Navbar'
+import React from "react";
+import "./proposal.css";
+import Section from "../../components/Section";
+import Navbar from "../../components/Navbar";
+
 const Proposal = () => {
   return (
     <div>
-      <Navbar/>
+      <div>
+        <Navbar />
+      </div>
+      <div className="contribute">
+        <Section />
+        <Section />
+        <Section />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Proposal
+export default Proposal;

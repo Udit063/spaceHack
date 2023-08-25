@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(to bottom, white, rgb(2, 50, 123));
+}
+
+.contribute {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
