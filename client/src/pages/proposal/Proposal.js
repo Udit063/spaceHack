@@ -1,9 +1,7 @@
-import React from 'react'
-import "./proposal.css"
+import React from "react";
+import "./proposal.css";
 const Proposal = () => {
-  return (
-    <div>Proposal</div>
-  )
-}
+  return <div>Proposal</div>;
+};
 
-export default Proposal
+export default Proposal;

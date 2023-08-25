@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  width: 100%;
+  background-color: black;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: 50px;
+  padding: 30px;
+  width: 120px;
+}
+
+.navComponents {
+  display: flex;
+}
+
+span {
+  color: white;
+  padding: 30px;
+  font-size: large;
+  font-family: serif;
+  cursor: pointer;
+}
+
+.logout {
+  color: white;
+  padding: 50px;
+  font-size: large;
+  cursor: pointer;
+}
