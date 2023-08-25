@@ -1,0 +1,8 @@
+.header {
+  background: url("https://i.pinimg.com/originals/91/60/63/916063c2df7e83bce6282618e07d00ce.jpg");
+  background-repeat: no-repeat;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  background-size: cover;
+}
