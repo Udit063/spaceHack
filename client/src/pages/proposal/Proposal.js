@@ -1,8 +1,11 @@
 import React from 'react'
 import "./proposal.css"
+import Navbar from '../../components/Navbar'
 const Proposal = () => {
   return (
-    <div>Proposal</div>
+    <div>
+      <Navbar/>
+    </div>
   )
 }
 

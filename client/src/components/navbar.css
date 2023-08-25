@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color: black;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 60px;
+    width: 50px;
+    padding: 30px;
+    width: 120px;
+  }
+
+
+
+  .links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links ul li a{
+    list-style: none;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .logout{
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .logout button{
+    width: 100px;
+    height: 40px;
+    background-color: #9fd2d2;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition-duration: 0.5s;
+  }
+
+  .logout button:hover{
+    background-color: #567272;
+    border-radius: 15px;
+  }

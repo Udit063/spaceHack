@@ -1,8 +1,11 @@
 import React from 'react'
 import "./satellite.css"
+import Navbar from '../../components/Navbar'
 const Satellite = () => {
   return (
-    <div>Satellite</div>
+    <div>
+      <Navbar/>
+    </div>
   )
 }
 

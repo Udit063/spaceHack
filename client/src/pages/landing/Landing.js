@@ -14,9 +14,6 @@ const Landing = () => {
     <div className="landing">
       <div className="heroSection">
         <div className="leftArea">
-          {/* <div className="logo"> */}
-          {/* Space <span>Hack</span> */}
-          {/* </div> */}
           <div className="image">
             <img src="./spaceImage.jpg" alt="" />
           </div>

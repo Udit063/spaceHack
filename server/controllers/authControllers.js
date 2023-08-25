@@ -2,6 +2,9 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { error, success } = require("../Utilies/responseWrapper");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const signupController = async (req, res) => {
     try {
@@ -42,9 +45,9 @@ const signupController = async (req, res) => {
 
 const loginController = async (req, res) => {
     try {
-        const { email, password ,Organizer_Name} = req.body;
+        const { email, password ,organization} = req.body;
 
-        if (!email || !password||!Organizer_Name) {
+        if (!email || !password||!organization) {
             // return res.status(400).send("All fields are required");
             return res.status(400).json({
                 message: "all fields are required"
@@ -65,9 +68,7 @@ const loginController = async (req, res) => {
                 message: "incorrect password"
             })        }
 
-        const accessToken = generateAccessToken({
-            _id: user._id,
-        });
+        const accessToken = generateAccessToken(user._id);
         const refreshToken = generateRefreshToken({
             _id: user._id,
         });
@@ -78,8 +79,9 @@ const loginController = async (req, res) => {
         });
 
         return res.status(200).json({
-            message: "success",
-            accessToken
+                message: "success",
+                accessToken: accessToken,
+                user: user._id
             
         })    } catch (e) {
         return res.status(500).json({
@@ -131,7 +133,7 @@ const logoutController = async (req, res) => {
 //internal functions
 const generateAccessToken = (data) => {
     try {
-        const token = jwt.sign(data, process.env.REFRESH_TOKEN_PRIVATE_KEY, {
+        const token = jwt.sign({id:data}, process.env.PRIVATE_KEY, {
             expiresIn: "1d",
         });
         console.log(token);
@@ -143,8 +145,7 @@ const generateAccessToken = (data) => {
 
 const generateRefreshToken = (data) => {
     try {
-        const token = jwt.sign(data, process.env.REFRESH_TOKEN_PRIVATE_KEY, {
-            expiresIn: "1y",
+        const token = jwt.sign({id:data}, process.env.PRIVATE_KEY, {
         });
         console.log(token);
         return token;
