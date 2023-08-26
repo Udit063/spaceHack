@@ -5,16 +5,12 @@ import Navbar from "../../components/Navbar";
 
 const Proposal = () => {
   return (
-    <div>
-      <div>
-        <Navbar />
-      </div>
       <div className="contribute">
+      <div className="contributeHead">Contribute To the growth of Indian Space Industry</div>
         <Section />
         <Section />
         <Section />
       </div>
-    </div>
   );
 };
 
