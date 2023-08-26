@@ -17,6 +17,7 @@ body {
     width: 50px;
     padding: 30px;
     width: 120px;
+    cursor: pointer;
   }
 
 
@@ -27,15 +28,24 @@ body {
     align-items: center;
   }
 
-  .links ul li a{
+  .links ul li{
+
     list-style: none;
+  }
+
+  .links ul li a{
     color: white;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
     text-decoration: none;
+    transition-duration: 0.5s;
   }
   
+  .links ul li a:hover{
+    color: #567272;
+  }
+
   .logout{
     margin-right: 15px;
     margin-bottom: 15px;
