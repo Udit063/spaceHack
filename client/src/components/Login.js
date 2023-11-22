@@ -1,20 +1,20 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {useCookies} from "react-cookie";
+import { useCookies } from "react-cookie";
+import { toast } from "react-toastify";
 const Login = () => {
-
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
     email: "",
     organization: "",
-    password: ""
-  })
+    password: "",
+  });
 
-  const [ _ , setCookies] = useCookies(["accessToken"]);
-  const {email, organization, password} = inputValue;
-  
+  const [_, setCookies] = useCookies(["accessToken"]);
+  const { email, organization, password } = inputValue;
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue({
@@ -23,33 +23,32 @@ const Login = () => {
     });
   };
 
-  const handleLogin = async(e)=>{
+  const handleLogin = async (e) => {
     e.preventDefault();
-    try{
-      const response = await axios.post("http://localhost:8000/auth/login",
-      {
-        ...inputValue,
-      },
-      { withCredentials: true }
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/auth/login",
+        {
+          ...inputValue,
+        },
+        { withCredentials: true }
       );
-      
-      navigate("/home") //-- use this to transfer user to home page after signup
+
+      navigate("/home"); //-- use this to transfer user to home page after signup
       setInputValue({
         email: "",
         organization: "",
-        password: ""
-      })
-      window.localStorage.setItem("userID" , response.data.user)
-      setCookies("accessToken",response.data.accessToken)
+        password: "",
+      });
+      window.localStorage.setItem("userID", response.data.user);
+      setCookies("accessToken", response.data.accessToken);
 
       console.log(response);
-
-    }catch(err){
+    } catch (err) {
       console.log(err);
+      toast.error(err.response.data.message);
     }
-  }
-
-
+  };
 
   return (
     <div className="login">
@@ -80,7 +79,7 @@ const Login = () => {
           onChange={handleOnChange}
         />
         <div className="loginbtn">
-          <button onClick={(e)=>handleLogin(e)}>Login</button>
+          <button onClick={(e) => handleLogin(e)}>Login</button>
         </div>
       </form>
     </div>

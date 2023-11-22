@@ -39,14 +39,12 @@
   object-fit: cover;
 }
 
-
-
 .btnlogin {
   width: 11vw;
   border: 1px solid black;
   border-radius: 12px;
-  }
+}
 
-.btnlogin:hover{
+.btnlogin:hover {
   opacity: 0.8;
 }
