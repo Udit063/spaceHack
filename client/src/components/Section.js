@@ -1,43 +1,40 @@
 import React from "react";
 import "./section.css";
 
-const Section = () => {
+const Section = ({ title, content, listItems, date, contactInfo, para2 }) => {
   return (
     <div className="box">
-      <div className="head">ISRO</div>
+      <div className="head">{title}</div>
       <div className="body">
-        <p className="para1">
-          For the provision of satellite launch services, ISRO is inviting bids
-          from reputable private aerospace firms. Through this project, we hope
-          to strengthen our country's space capabilities by utilising the
-          knowledge and resources of the private sector.
-        </p>
-        <strong className="head1">Work scope:</strong>
+        {content && <p className="para1">{content}</p>}
+        <strong className="head1">Work Scope:</strong>
         <ul className="list1">
-          <li>Launching two satellites into predetermined orbits.</li>
-          <li>
-            Providing the launch vehicle, integrating the payload, managing the
-            launch, and providing post-launch assistance.
-          </li>
+          {listItems &&
+            listItems.map((item, index) => <li key={index}>{item}</li>)}
         </ul>
         <strong>Conditions for Submission:</strong>
         <ul>
-          <li>Details about the launch vehicle and technical approach.</li>
-          <li>Cost breakdown and suggested budget.</li>
-          <li>successful satellite launches in the past.</li>
+          <li>Technical details regarding specifications and approach.</li>
+          <li>A comprehensive breakdown of costs and a proposed budget.</li>
+          <li>Evidence of successful implementation of similar projects.</li>
         </ul>
         <p>
-          <strong>Date of Submission: </strong>September 22, 2023
+          <strong>Date of Submission: </strong>
+          {date || "N/A"}
         </p>
         <p>
-          <strong>Contact Information : </strong>[Name, Email, Phone]
+          <strong>Contact Information: </strong>
+          {contactInfo || "N/A"}
         </p>
-        <p className="para2">
-          "We are eager to hear about your ideas and work with you to strengthen
-          our country's space exploration capabilities."
-        </p>
+        {para2 && <p className="para2">{para2}</p>}
       </div>
-      <button className="apply">Apply</button>
+      <a
+        href="https://eproc.vssc.gov.in/home.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="apply">Apply</button>
+      </a>
     </div>
   );
 };

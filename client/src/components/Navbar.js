@@ -1,16 +1,16 @@
 import React from "react";
 import "./navbar.css";
-import { Link , useNavigate} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const Navbar = ({background = "black"}) => {
-
-
+const Navbar = ({ background = "black" }) => {
+  const location = useLocation();
+  const isBlogPage = location.pathname.includes("/blogs");
 
   const navigate = useNavigate();
   const handleLogout = async () => {
-    window.localStorage.removeItem("userID");
     try {
+      window.localStorage.removeItem("userID");
       const response = await axios.post("http://localhost:8000/auth/logout");
       console.log(response.data); // Optional: Log the response data
       navigate("/");
@@ -21,16 +21,28 @@ const Navbar = ({background = "black"}) => {
   return (
     <div style={{ backgroundColor: background }} className="navbar">
       <div className="logo">
-        <img src="./logo.png" alt="" />
+        {/* <img src="./logo.png" alt="Logo" /> */}
+        Space🌍Sync
       </div>
       <div className="links">
         <ul>
-          <li><Link to={"/home "}>Home</Link></li>
-          <li><Link to={"/home"}>Contribute</Link></li>
+          <li>
+            <Link to={"/home "}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/blogs"}>Blogs</Link>
+          </li>
         </ul>
       </div>
       <div className="logout">
-        <button onClick={handleLogout}>LogOut</button>
+        {isBlogPage && (
+          <Link to={"/blogs/write"}>
+            <button className="navbutton">Write Blog</button>
+          </Link>
+        )}
+        <button className="navbutton" onClick={handleLogout}>
+          LogOut
+        </button>
       </div>
     </div>
   );

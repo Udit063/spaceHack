@@ -49,9 +49,9 @@ exports.updatePost = async (req, res) => {
 };
 
 exports.deletePost = async (req, res) => {
-  const { id: _id } = req.params;
+  const { id } = req.params; // Use req.params.id to get the ID
   try {
-    const deletedPost = await Post.findByIdAndRemove(_id);
+    const deletedPost = await Post.findByIdAndRemove(id);
     res.status(200).json(deletedPost);
   } catch (error) {
     res.status(409).json({

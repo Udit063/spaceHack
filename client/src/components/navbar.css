@@ -1,66 +1,127 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    width: 100%;
-    background-color: black;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 60px;
-    width: 50px;
-    padding: 30px;
-    width: 120px;
-    cursor: pointer;
-  }
+  margin: 0;
+  padding: 0;
+}
 
+.navbar {
+  width: 100%;
+  background-color: black;
+  height: 60px;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
 
+.logo {
+  color: white;
+}
 
-  .links ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.logo img {
+  height: 60px;
+  width: 50px;
+  padding: 30px;
+  width: 120px;
+  cursor: pointer;
+}
 
-  .links ul li{
+.links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    list-style: none;
-  }
+.links ul li {
+  list-style: none;
+}
 
-  .links ul li a{
-    color: white;
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    transition-duration: 0.5s;
-  }
-  
-  .links ul li a:hover{
-    color: #567272;
-  }
+.links ul li a {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
 
-  .logout{
-    margin-right: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .logout button{
-    width: 100px;
-    height: 40px;
-    background-color: #9fd2d2;
-    border: 1px solid black;
-    border-radius: 20px;
-    transition-duration: 0.5s;
-  }
+.links ul li a:hover {
+  color: #567272;
+}
 
-  .logout button:hover{
-    background-color: #567272;
-    border-radius: 15px;
-  }
+.logout {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.navbutton {
+  width: 135px;
+  height: 40px;
+  background-color: #9fd2d2;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+}
+
+.logout button:hover {
+  background-color: #567272;
+  border-radius: 15px;
+}
+/* navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black; /* Set your desired background color */
+  color: white;
+  margin-right: -105px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.links li {
+  margin-right: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.links a:hover {
+  color: #3498db; /* Set your desired hover color */
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+}
+
+.navbutton {
+  background-color: #3498db; /* Set your desired button color */
+  color: white;
+  border: none;
+  /* padding: 8px 12px; */
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  width: 125px;
+  margin-top: 10px;
+}
+
+.navbutton:hover {
+  background-color: #2980b9; /* Set your desired hover button color */
+}

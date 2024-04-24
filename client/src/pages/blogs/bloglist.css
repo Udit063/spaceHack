@@ -1,0 +1,7 @@
+.blogList {
+  margin: 0;
+  height: 100%;
+  width: 100vw;
+  padding: 0;
+  background: linear-gradient(62deg, #0a2d48 16%, #0084ff 68%, #ffffff 97%);
+}

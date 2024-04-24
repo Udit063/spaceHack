@@ -1,4 +1,3 @@
-//we can use this too but we will have to make chane in our package.json --> we will have to add "type":"module"
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");

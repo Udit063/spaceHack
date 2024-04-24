@@ -1,0 +1,64 @@
+.blogbox {
+  margin: 30px 0 30px 237px;
+  width: 68vw;
+  border: 2px solid #3498db;
+  padding: 20px;
+  /* margin: 20px; */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+  transition: transform 0.3s ease-in-out;
+  background-color: #11172c;
+}
+
+.blogbox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.8);
+}
+
+.blogbox > div {
+  margin-bottom: 10px;
+}
+
+.blogbox > div:first-child {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.blogbox > div:last-child {
+  color: #888;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Additional flashy styles for individual blog components */
+.blog-content {
+  line-height: 1.6;
+  color: #fff;
+}
+
+.blog-author {
+  font-style: italic;
+  color: #fff;
+}
+
+.blog-subtitle {
+  color: #2980b9;
+  font-weight: bold;
+}
